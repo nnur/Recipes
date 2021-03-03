@@ -6,4 +6,4 @@ then
 else
     sudo rm -rf /usr/apps/recipes
 fi
-sudo mkdir -p /usr/apps/recipes
+sudo mkdir -p /usr/apps/recipes/recipes

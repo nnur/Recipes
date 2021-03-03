@@ -1,8 +1,8 @@
 version: 0.0
 os: linux
 files:
-  - source: src
-    destination: /usr/apps/recipes
+  - source: recipes
+    destination: /usr/apps/recipes/recipes
 hooks:
   ApplicationStop:
     - location: scripts/application_stop.sh
