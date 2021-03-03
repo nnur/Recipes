@@ -1,0 +1,14 @@
+version: 0.0
+os: linux
+files:
+  - source: src
+    destination: /usr/apps/recipes
+hooks:
+  ApplicationStop:
+    - location: scripts/application_stop.sh
+  BeforeInstall:
+    - location: scripts/before_install.sh
+  AfterInstall:
+    - location: scripts/after_install.sh
+  ApplicationStart:
+    - location: scripts/application_start.sh
