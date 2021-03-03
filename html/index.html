@@ -6,6 +6,10 @@
     <title>Recipes</title>
 </head>
 <body>
-    Soup Mush 1
+    DAILY Mush 1
+    <script>
+        fetch(`http://${location.hostname}:8000/`)
+            .then(r => console.log(r))
+    </script>
 </body>
 </html>
