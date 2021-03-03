@@ -5,6 +5,8 @@ files:
     destination: /usr/apps/recipes/recipes
   - source: requirements.txt
     destination: /usr/apps/recipes
+  - source: html/index.html
+    destination: /var/www/html
 hooks:
   ApplicationStop:
     - location: scripts/application_stop.sh
