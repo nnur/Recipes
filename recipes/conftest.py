@@ -19,9 +19,10 @@ def client():
     _drop_test_db()
     _create_test_db()
     app = create_app()
-    context = app.app_context()
-    context.push()
-    db.create_all()
-    yield app
-    _drop_test_db()
-    context.pop()
+    with app.test_client() as client:
+        context = app.app_context()
+        context.push()
+        db.create_all()
+        yield client
+        _drop_test_db()
+        context.pop()

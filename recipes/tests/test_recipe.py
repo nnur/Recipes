@@ -1,5 +1,6 @@
 from recipes.models.recipe import Recipe
 from recipes.models import db
+import json
 
 def test_recipe(client):
     chicken_soup = Recipe(name='chicken soup', servings=10, description="delicious")
@@ -8,7 +9,7 @@ def test_recipe(client):
     db.session.add(brisket)
     db.session.commit()
 
-    recipes = Recipe.query.all()
-
-    assert recipes[0].name == chicken_soup.name
-    assert recipes[1].name == brisket.name
+    response = client.get("/recipes")
+    parsed_response = json.loads(response.data)
+    assert parsed_response[0]['name'] == chicken_soup.name
+    assert parsed_response[1]['name'] == brisket.name

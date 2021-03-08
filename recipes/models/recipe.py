@@ -7,8 +7,6 @@ class Recipe(db.Model):
     servings = db.Column(db.Integer(), default=1)
     name = db.Column(db.String(200))
     description = db.Column(db.String())
-   
-
 
     def __repr__(self):
         return '<Recipe %r>' % self.name
