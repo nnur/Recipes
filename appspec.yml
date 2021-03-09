@@ -12,7 +12,6 @@ hooks:
     - location: scripts/application_stop.sh
   BeforeInstall:
     - location: scripts/before_install.sh
-    - location: scripts/set_env.sh
   AfterInstall:
     - location: scripts/after_install.sh
   ApplicationStart:
