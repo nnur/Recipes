@@ -16,5 +16,6 @@ hooks:
     - location: scripts/after_install.sh
   ApplicationStart:
     - location: scripts/application_start.sh
+      runas: ubuntu
   ValidateService:
     - location: scripts/validate_service.sh
