@@ -5,7 +5,7 @@ from recipes.models.ingredient import Ingredient
 
 class HelloWorld(Resource):
     def get(self):
-        return 'hello world!'
+        return 'cello world!'
 
 recipes_fields = {
     'id': fields.String,
