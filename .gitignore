@@ -5,6 +5,7 @@ __pycache__/
 # custom
 *.pem
 .DS_Store
+set_envs.sh
 # C extensions
 *.so
 
