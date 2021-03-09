@@ -1,3 +1,2 @@
 #!/bin/bash
-pkill gunicorn
-exit 0
+if pgrep gunicorn; then pkill gunicorn; fi
