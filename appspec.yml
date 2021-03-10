@@ -3,6 +3,8 @@ os: linux
 files:
   - source: recipes
     destination: /usr/apps/recipes/recipes
+  - source: migrations
+    destination: /usr/apps/recipes/migrations
   - source: requirements.txt
     destination: /usr/apps/recipes
   - source: html/index.html
