@@ -7,6 +7,7 @@ class Recipe(db.Model):
     servings = db.Column(db.Integer(), default=1)
     name = db.Column(db.String(200))
     description = db.Column(db.String())
+    ingredients = db.relationship("Ingredient", cascade="all,delete", backref="recipe")
 
     def __repr__(self):
         return '<Recipe %r>' % self.name

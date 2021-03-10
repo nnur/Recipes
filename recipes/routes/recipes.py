@@ -2,6 +2,7 @@ from flask import request, jsonify
 from flask_restful import Resource, fields, marshal_with, reqparse
 from recipes.models import db
 from recipes.models.recipe import Recipe
+from recipes.models.ingredient import Ingredient
 
 
 class HelloWorld(Resource):
