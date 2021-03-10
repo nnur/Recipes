@@ -10,10 +10,10 @@ def create_app():
     api = Api(app)
 
     from recipes.models import db
-    from recipes.routes import HelloWorld, Recipes
+    from recipes.routes.recipes import HelloWorld, Recipes
     
     api.add_resource(HelloWorld, '/') 
-    api.add_resource(Recipes, '/recipes') 
+    api.add_resource(Recipes, '/recipes', '/recipes/<string:id>') 
 
     db.init_app(app)
     migrate = Migrate(app, db)
