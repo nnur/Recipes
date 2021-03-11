@@ -43,7 +43,8 @@ class Recipes(Resource):
         args = self.reqparse.parse_args()
 
         for key, value in args.items():
-            setattr(recipe, key, value)
+            if value is not None: 
+                setattr(recipe, key, value)
 
         db.session.commit()
         return recipe, 200
