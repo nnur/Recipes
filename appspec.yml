@@ -7,7 +7,7 @@ files:
     destination: /usr/apps/recipes/migrations
   - source: requirements.txt
     destination: /usr/apps/recipes
-  - source: html/index.html
+  - source: frontend/build
     destination: /var/www/html
 hooks:
   ApplicationStop:
