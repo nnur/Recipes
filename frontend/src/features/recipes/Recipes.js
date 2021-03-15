@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchRecipes, selectRecipes } from './recipesSlice'
+import { Link } from "react-router-dom";
 
 export function Recipes() {
     const recipes = useSelector(selectRecipes);
@@ -21,9 +22,9 @@ export function Recipes() {
             <ul>
                 {recipes.map(el => (
                     <li key={el.id}>
-                        <a href='/boo'> 
+                        <Link to={`/recipes/${el.id}`}>
                             {el.name}
-                        </a>
+                        </Link>
                     </li>
                 ))}
             </ul>
